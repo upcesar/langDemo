@@ -1,0 +1,13 @@
+﻿@model demoApp.ViewModels.Home.MyViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+
+<form action="/Home/Save" method="post">
+    @Html.LabelFor(model => model.Name)
+    <br />
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+
+    <br />
+    <br />
+    <input type="submit" value="Save" class="btn btn-default" />
+</form>
